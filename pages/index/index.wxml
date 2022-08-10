@@ -1,4 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-  首页
+  <view class="swiper_view">
+    <swiper indicator-dots autoplay>
+      <swiper-item>
+        <image mode="heightFix" src="images/HomeCover01.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image mode="heightFix" src="images/HomeCover02.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image mode="heightFix" src="images/HomeCover03.jpg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view>
+    今天是大锤和美丽在一起第{{howLongDays}}天
+  </view>
 </view>
