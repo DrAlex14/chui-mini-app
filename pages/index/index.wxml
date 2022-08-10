@@ -2,12 +2,12 @@
 <view class="container">
   <view class="swiper_view">
     <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" style="background: white; height: 200px; width: 100%;">
-      <swiper-item  wx:for="{{homeImages}}" wx:for-item="homeImageUrl">
+      <swiper-item  wx:for="{{homeImages}}" wx:for-item="homeImageUrl" wx:key="idx">
         <image mode="heightFix" src="{{homeImageUrl}}"></image>
       </swiper-item>
     </swiper>
   </view>
-  <view style="width: 100%">
+  <view style="width: 100%; margin-top: 100rpx">
     <view class="form-group_label">💰 积分榜</view>
     <view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
       <view class="form-cell">
