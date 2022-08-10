@@ -1,0 +1,11 @@
+<!--logs.wxml-->
+<view class="container">
+  <view>
+    <van-calendar
+      poppable="{{ false }}"
+      show-confirm="{{ false }}"
+      class="calendar"
+      formatter="{{ formatter }}"
+    />
+  </view>
+</view>

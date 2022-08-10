@@ -7,6 +7,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    // userInfo: null
+    userA: '大锤',
+    userB: '美丽'
   }
 })

@@ -1,19 +1,39 @@
 <!--index.wxml-->
 <view class="container">
   <view class="swiper_view">
-    <swiper indicator-dots autoplay>
-      <swiper-item>
-        <image mode="heightFix" src="images/HomeCover01.jpg"></image>
-      </swiper-item>
-      <swiper-item>
-        <image mode="heightFix" src="images/HomeCover02.jpg"></image>
-      </swiper-item>
-      <swiper-item>
-        <image mode="heightFix" src="images/HomeCover03.jpg"></image>
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" style="background: white; height: 200px; width: 100%;">
+      <swiper-item  wx:for="{{homeImages}}" wx:for-item="homeImageUrl">
+        <image mode="heightFix" src="{{homeImageUrl}}"></image>
       </swiper-item>
     </swiper>
   </view>
-  <view>
-    今天是大锤和美丽在一起第{{howLongDays}}天
+  <view style="width: 100%">
+    <view class="form-group_label">💰 积分榜</view>
+    <view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
+      <view class="form-cell">
+          <view class="slide">
+          <view class="title">{{userA}}的积分：{{creditA}}</view>
+          </view>
+      </view>
+      <view class="form-cell">
+          <view class="slide">
+          <view class="title">{{userB}}的积分：{{creditB}}</view>
+          </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group_label">🐻 欢迎回来</view>
+  <view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
+    <view class="form-cell">
+      <view class="slide">
+        <view class="title">欢迎！大锤和美丽！</view>
+      </view>
+    </view>
+    <view class="form-cell">
+      <view class="slide">
+        <view class="title">今天想做什么呢？</view>
+      </view>
+    </view>
   </view>
 </view>

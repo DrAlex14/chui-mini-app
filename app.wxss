@@ -1,4 +1,5 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -7,3 +8,18 @@
   justify-content: space-between;
   box-sizing: border-box;
 } 
+
+.form-group {
+  width: calc(100% - 40px);
+  margin: 10px 20px;
+  border-radius: 10px;
+  background: white;
+}
+
+.form-group_label {
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #8D8D8D;
+  font-size: 15px;
+}

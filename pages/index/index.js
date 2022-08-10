@@ -6,12 +6,26 @@ const app = getApp()
 Page({
   data: {
     howLongDays: 0,
+    homeImages: [
+      "images/HomeCover01.jpg",
+      "images/HomeCover02.jpg",
+      "images/HomeCover03.jpg"
+    ],
+    creditA: 0,
+    creditB: 0,
+
+    userA: '',
+    userB: '',
   },
   onLoad() {
 
   },
   onShow() {
     this.calcHowLongDays();
+    this.setData({
+      userA: getApp().globalData.userA,
+      userB: getApp().globalData.userB,
+    })
   },
 
   // methods

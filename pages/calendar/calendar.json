@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "恋爱日历",
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index"
+  }
+}
