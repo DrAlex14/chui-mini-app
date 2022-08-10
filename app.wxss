@@ -23,3 +23,11 @@
   color: #8D8D8D;
   font-size: 15px;
 }
+
+.form-cell {
+  padding: 20px 15px;
+}
+
+.form-cell:not(:last-child) {
+  border-bottom: rgba(0, 0, 0, 0.05) solid 1px;
+}

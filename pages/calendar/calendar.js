@@ -31,9 +31,20 @@ Page({
       // }
 
       return day;
-    }
+    },
+    calendarShow: false,
   },
   onLoad() {
     
+  },
+  calendarClose() {
+    this.setData({
+      calendarShow: false
+    })
+  },
+  handleCalendarShow() {
+    this.setData({
+      calendarShow: true
+    })
   }
 })

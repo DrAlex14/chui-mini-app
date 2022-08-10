@@ -18,7 +18,7 @@ Page({
     userB: '',
   },
   onLoad() {
-
+    this.needLogin();
   },
   onShow() {
     this.calcHowLongDays();
@@ -38,5 +38,14 @@ Page({
     this.setData({
       howLongDays: howLongDays
     })
+  },
+
+  // 判断有无登录
+  needLogin() {
+    if ( !wx.getStorageSync('userInfo') ) {
+      wx.switchTab({
+        url: '/pages/mine/mine',
+      });
+    }
   }
 })
