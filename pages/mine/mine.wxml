@@ -16,7 +16,7 @@
       <view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
         <view class="form-cell">
             <view class="slide">
-            <view class="title">我的积分：{{creditA}}</view>
+            <view class="title">我的积分：{{myCredit}}</view>
             </view>
         </view>
       </view>

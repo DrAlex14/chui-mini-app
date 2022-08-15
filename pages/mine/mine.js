@@ -7,7 +7,8 @@ Page({
   data: {
     userInfo: {},
     openId: '',
-    needLogin: true
+    needLogin: true,
+    myCredit: 0,
   },
   onLoad() {
     const userInfo = wx.getStorageSync('userInfo');
@@ -17,6 +18,19 @@ Page({
         userInfo: userInfo
       })
     }
+  },
+  onShow() {
+    wx.cloud.callFunction({
+      name: 'getCreditByOpenid',
+      data: {
+        openId: wx.getStorageSync('userInfo').openId
+      },
+      success: res => {
+        this.setData({
+          myCredit: res.result.res.data[0].credit
+        })
+      }
+    })
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
