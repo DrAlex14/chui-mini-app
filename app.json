@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
-    "pages/calendar/calendar"
+    "pages/calendar/calendar",
+    "pages/market/market"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,19 +15,26 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "selectedIconPath": "assets/HomeIconColor.jpg",
-        "iconPath": "assets/HomeIconGrey.jpg",
+        "selectedIconPath": "assets/homeselected.png",
+        "iconPath": "assets/home.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/market/market",
+        "selectedIconPath": "assets/marketselected.png",
+        "iconPath": "assets/market.png",
+        "text": "商城"
       },
       {
         "pagePath": "pages/calendar/calendar",
         "selectedIconPath": "assets/rili.png",
-        "iconPath": "assets/riligrey.png",
+        "iconPath": "assets/calendar.png",
         "text": "日期记录"
-      },{
+      },
+      {
         "pagePath": "pages/mine/mine",
-        "selectedIconPath": "assets/MarketIconColor.jpg",
-        "iconPath": "assets/MarketIconGrey.jpg",
+        "selectedIconPath": "assets/mineselected.png",
+        "iconPath": "assets/mine.png",
         "text": "我的"
       }
     ]

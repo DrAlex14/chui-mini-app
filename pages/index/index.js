@@ -27,21 +27,16 @@ Page({
       userM: getApp().globalData.userM,
     })
 
-    // 测试openid
-    const user = wx.getStorageSync('userInfo');
-    if (user.openId === getApp().globalData._openidM) {
-      this.setData({
-        userM: getApp().globalData.userM + user.openId
-      })
-    } else {
-      this.setData({
-        userW: getApp().globalData.userW + user.openId
-      })
-    }
     wx.cloud.callFunction({
-      name: 'getcredit',
+      name: 'getCredit',
       success: res => {
-        console.log(res);
+        let result = res.result.res
+        let creditw = result.data.find((item, index, array) => item._openid === getApp().globalData._openidW).credit
+        let creditm = result.data.find((item, index, array) => item._openid === getApp().globalData._openidM).credit
+        this.setData({
+          creditW: creditw,
+          creditM: creditm
+        })
       }
     })
   },
