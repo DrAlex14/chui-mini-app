@@ -11,11 +11,11 @@ Page({
       "images/HomeCover02.jpg",
       "images/HomeCover03.jpg"
     ],
-    creditA: 0,
-    creditB: 0,
+    creditW: 0,
+    creditM: 0,
 
-    userA: '',
-    userB: '',
+    userW: '',
+    userM: '',
   },
   onLoad() {
     this.needLogin();
@@ -23,8 +23,26 @@ Page({
   onShow() {
     this.calcHowLongDays();
     this.setData({
-      userA: getApp().globalData.userA,
-      userB: getApp().globalData.userB,
+      userW: getApp().globalData.userW,
+      userM: getApp().globalData.userM,
+    })
+
+    // 测试openid
+    const user = wx.getStorageSync('userInfo');
+    if (user.openId === getApp().globalData._openidM) {
+      this.setData({
+        userM: getApp().globalData.userM + user.openId
+      })
+    } else {
+      this.setData({
+        userW: getApp().globalData.userW + user.openId
+      })
+    }
+    wx.cloud.callFunction({
+      name: 'getcredit',
+      success: res => {
+        console.log(res);
+      }
     })
   },
 

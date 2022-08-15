@@ -14,13 +14,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
+        "selectedIconPath": "assets/HomeIconColor.jpg",
+        "iconPath": "assets/HomeIconGrey.jpg",
         "text": "首页"
       },
       {
         "pagePath": "pages/calendar/calendar",
-        "text": "日历"
+        "selectedIconPath": "assets/rili.png",
+        "iconPath": "assets/riligrey.png",
+        "text": "日期记录"
       },{
         "pagePath": "pages/mine/mine",
+        "selectedIconPath": "assets/MarketIconColor.jpg",
+        "iconPath": "assets/MarketIconGrey.jpg",
         "text": "我的"
       }
     ]

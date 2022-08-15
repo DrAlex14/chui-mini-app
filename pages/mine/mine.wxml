@@ -3,12 +3,22 @@
     <view wx:if="{{needLogin}}">
       <button type="primary" bindtap="getUserProfile"> 登录 </button>
     </view>
-    <view wx:else>
-      <view>
-        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view wx:else class="user">
+      <view class="avatar">
+        <view>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view>
+          <text>{{userInfo.nickName}}</text>
+        </view>
       </view>
-      <view>
-        <text>{{userInfo.nickName}}</text>
+
+      <view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
+        <view class="form-cell">
+            <view class="slide">
+            <view class="title">我的积分：{{creditA}}</view>
+            </view>
+        </view>
       </view>
     </view>
   </view>

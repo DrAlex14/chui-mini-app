@@ -7,8 +7,12 @@ App({
     })
   },
   globalData: {
-    // userInfo: null
-    userA: '大锤',
-    userB: '美丽'
+    //记录使用者的openid
+    _openidM: 'o7KsM5b9BsT1U-jg23wcgGAWkIoc',
+    _openidW: 'o7KsM5TouXfxcwchD6r6qKr9IFwE',
+
+    //记录使用者的名字
+    userM: '大锤',
+    userW: '美丽'
   }
 })
