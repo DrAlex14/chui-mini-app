@@ -23,16 +23,15 @@ Page({
           day.bottomInfo = '恋爱纪念日'
         }
       }
-
-      // if (day.type === 'start') {
-      //   day.bottomInfo = '入住';
-      // } else if (day.type === 'end') {
-      //   day.bottomInfo = '离店';
-      // }
-
       return day;
     },
     calendarShow: false,
+    userWBirthDayLeft: 0,
+    userMBirthDayLeft: 0
+  },
+  onShow() {
+    // 计算生日
+    this.calcBirthDay()
   },
   onLoad() {
     
@@ -45,6 +44,29 @@ Page({
   handleCalendarShow() {
     this.setData({
       calendarShow: true
+    })
+  },
+  // 计算生日
+  getDaysToBirthday(month, day) {
+    let nowTime = new Date();
+    let thisYear = nowTime.getFullYear();
+    //今年的生日
+    let birthday = new Date(thisYear, month - 1, day);
+
+    //今年生日已过，则计算距离明年生日的天数
+    if (birthday < nowTime) {
+        birthday.setFullYear(nowTime.getFullYear() + 1);
+    }
+    let timeDec = birthday - nowTime;
+    let days = timeDec / (24 * 60 * 60 * 1000);
+    return Math.ceil(days);
+  },
+  calcBirthDay() {
+    let userWBirthDayLeft = this.getDaysToBirthday(10, 21);
+    let userMBirthDayLeft = this.getDaysToBirthday(7, 30);
+    this.setData({
+      userMBirthDayLeft: userMBirthDayLeft,
+      userWBirthDayLeft: userWBirthDayLeft
     })
   }
 })
