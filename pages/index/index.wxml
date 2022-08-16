@@ -24,18 +24,17 @@
   </view>
 
   <view class="form-group_label">欢迎🔨 大锤和美丽！🐖</view>
-  <view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
-    <view class="form-cell">
-      <view class="slide">
-        <view class="title">今天是在一起的第{{howLongDays}}天</view>
-      </view>
-    </view>
-    <view class="form-cell">
-      <view class="slide">
-        <view class="title">今天想做什么呢？</view>
-      </view>
-    </view>
-  </view>
-
-  <view style="height:1000rpx"></view>
+    <van-cell-group class="form-group" style="width:100%;">
+      <van-cell title="今天是在一起的第{{howLongDays}}天"></van-cell>
+      <van-cell title="今天想做什么呢" is-link bind:click="showPopup" />
+      <van-popup show="{{ popupShow }}" bind:close="closePopup" position="bottom">
+        <view style="width:100%">
+          <van-cell-group style="width:100%;">
+            <van-cell title="📝查看我的任务" is-link bind:click="" />
+            <van-cell title="🛒逛逛商城" is-link bind:click="" />
+            <van-cell title="♥❤发布任务给TA" is-link bind:click="" />
+          </van-cell-group>
+        </view>
+      </van-popup>
+    </van-cell-group>
 </view>

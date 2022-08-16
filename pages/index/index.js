@@ -16,6 +16,7 @@ Page({
 
     userW: '',
     userM: '',
+    popupShow: false
   },
   onLoad() {
     this.needLogin();
@@ -60,5 +61,11 @@ Page({
         url: '/pages/mine/mine',
       });
     }
-  }
+  },
+  showPopup() {
+    this.setData({ popupShow: true })
+  },
+  closePopup() {
+    this.setData({ popupShow: false });
+  },
 })
