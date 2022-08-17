@@ -68,4 +68,19 @@ Page({
   closePopup() {
     this.setData({ popupShow: false });
   },
+  handleCheckMyMission() {
+    wx.switchTab({
+      url: '/pages/mine/mine'
+    });
+  },
+  handleToMarket() {
+    wx.switchTab({
+      url: '/pages/market/market'
+    });
+  },
+  handleAddMission() {
+    wx.navigateTo({
+      url: '/pages/missionadd/missionadd'
+    });
+  }
 })

@@ -30,9 +30,9 @@
       <van-popup show="{{ popupShow }}" bind:close="closePopup" position="bottom">
         <view style="width:100%">
           <van-cell-group style="width:100%;">
-            <van-cell title="📝查看我的任务" is-link bind:click="" />
-            <van-cell title="🛒逛逛商城" is-link bind:click="" />
-            <van-cell title="♥❤发布任务给TA" is-link bind:click="" />
+            <van-cell title="📝查看我的任务" is-link bind:click="handleCheckMyMission" />
+            <van-cell title="🛒逛逛商城" is-link bind:click="handleToMarket" />
+            <van-cell title="♥❤发布任务给TA" is-link bind:click="handleAddMission" />
           </van-cell-group>
         </view>
       </van-popup>

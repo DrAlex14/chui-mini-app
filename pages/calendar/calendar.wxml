@@ -10,12 +10,17 @@
       </view> -->
       <view class="form-cell">
           <view class="slide">
-          <view class="title">还有{{userWBirthDayLeft}}天是美丽生日</view>
+            <view class="title">还有{{userWBirthDayLeft}}天是美丽生日</view>
           </view>
       </view>
       <view class="form-cell">
           <view class="slide">
-          <view class="title">还有{{userMBirthDayLeft}}天是大锤生日</view>
+            <view class="title">还有{{userMBirthDayLeft}}天是大锤生日</view>
+          </view>
+      </view>
+      <view class="form-cell">
+          <view class="slide">
+            <view class="title">下一次经期在</view>
           </view>
       </view>
     </view>
