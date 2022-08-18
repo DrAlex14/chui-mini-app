@@ -1,17 +1,14 @@
 {
-  "name": "chuiminiapp",
+  "name": "addMission",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.10.4",
-    "regenerator-runtime": "^0.13.9",
-    "wx-server-sdk": "^2.6.3"
+    "wx-server-sdk": "~2.6.3"
   }
 }

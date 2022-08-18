@@ -32,5 +32,8 @@
   border-bottom: rgba(0, 0, 0, 0.05) solid 1px;
 }
 
-
+@keyframes animation-blur {
+  from {filter: blur(7px);}
+  to {filter: blur(0px);}
+}
 

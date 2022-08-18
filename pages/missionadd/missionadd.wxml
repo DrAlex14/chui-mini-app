@@ -1,5 +1,5 @@
-<view class="container white" style="animation-name: animation-blur; animation-duration: 0.5s;">
-    <!-- <image src="../../images/Mission.gif" mode='widthFix' /> -->
+<view class="container" style="animation-name: animation-blur; animation-duration: 0.5s;">
+    <image src="./assets/Mission.gif" mode='widthFix' />
     <view class="form-group" style="z-index: 0; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05); ">
         <!-- <view class="form-cell">
             <view class="form-cell_title">🔖选择预设</view>
@@ -7,11 +7,11 @@
         </view> -->
         <view class="form-cell">
             <view class="form-cell_title">📌任务名称</view>
-        <input class="form-cell_input" placeholder="任务名是什么?" placeholder-class="form-cell_placeholder" bindinput="onTitleInput" value="{{title}}" />
+        <input class="form-cell_input" placeholder="任务名是什么?" placeholder-class="form-cell_placeholder" bindblur="onTitleInput" value="{{title}}" />
         </view>
         <view class="form-cell">
             <view class="form-cell_title">📝任务详情</view>
-        <textarea class="form-cell_input" placeholder="任务是要做什么呢?" placeholder-class="form-cell_placeholder" bindinput="onDescInput" value="{{desc}}" />
+        <textarea class="form-cell_input" placeholder="任务是要做什么呢?" placeholder-class="form-cell_placeholder" bindblur="onDescInput" value="{{desc}}" />
         </view>
         <view class="form-cell">
             <view class="form-cell_title">💰积分奖励</view>

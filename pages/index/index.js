@@ -69,16 +69,19 @@ Page({
     this.setData({ popupShow: false });
   },
   handleCheckMyMission() {
+    this.setData({ popupShow: false });
     wx.switchTab({
       url: '/pages/mine/mine'
     });
   },
   handleToMarket() {
+    this.setData({ popupShow: false });
     wx.switchTab({
       url: '/pages/market/market'
     });
   },
   handleAddMission() {
+    this.setData({ popupShow: false });
     wx.navigateTo({
       url: '/pages/missionadd/missionadd'
     });
