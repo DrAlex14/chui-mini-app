@@ -31,3 +31,20 @@
   padding: 100rpx 0;
   box-sizing: border-box;
 } 
+
+.mission-info {
+  width: auto;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column
+}
+
+
+
+.mission-info_author {
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+}

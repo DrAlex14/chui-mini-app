@@ -9,6 +9,8 @@ Page({
     openId: '',
     needLogin: true,
     myCredit: 0,
+    unfinishedMissions: [],
+    releasedMissions: [],
   },
   onLoad() {
     const userInfo = wx.getStorageSync('userInfo');
