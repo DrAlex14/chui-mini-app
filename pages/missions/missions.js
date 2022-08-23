@@ -35,6 +35,20 @@ Page({
         })
       },
     })
+    wx.cloud.callFunction({
+      name: 'getReleaseMissionListByOpenid',
+      data: {
+        openId: wx.getStorageSync('userInfo').openId
+      },
+      success: res => {
+        res.result.res.data.map(i => {
+          i.date = i.date.substring(0, 10)
+        })
+        this.setData({
+          releasedMissions: res.result.res.data
+        })
+      },
+    })
   },
   toMissionAddPage() {
     wx.navigateTo({

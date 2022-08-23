@@ -96,7 +96,6 @@ Page({
       return
     }else{
         const toOpenid = wx.getStorageSync('userInfo').openId === getApp().globalData._openidM ? getApp().globalData._openidW : getApp().globalData._openidM;
-        debugger
         this.setData({
           toOpenid: toOpenid
         })

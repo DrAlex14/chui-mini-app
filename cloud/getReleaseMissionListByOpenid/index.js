@@ -6,9 +6,9 @@ const db = cloud.database()
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  const toUserOpenid = event.toOpenId
+  const userOpenid = event.openId
   const res = await db.collection('MissionList').where({
-    toOpenId: toUserOpenid
+    _openid: userOpenid
   }).get()
   return {
     res
