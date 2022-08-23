@@ -2,9 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
-    "pages/calendar/calendar",
     "pages/market/market",
-    "pages/missionadd/missionadd"
+    "pages/missionadd/missionadd",
+    "pages/missions/missions"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,10 +27,10 @@
         "text": "商城"
       },
       {
-        "pagePath": "pages/calendar/calendar",
-        "selectedIconPath": "assets/rili.png",
-        "iconPath": "assets/calendar.png",
-        "text": "日期记录"
+        "pagePath": "pages/missions/missions",
+        "selectedIconPath": "assets/missionsselected.png",
+        "iconPath": "assets/missions.png",
+        "text": "任务"
       },
       {
         "pagePath": "pages/mine/mine",

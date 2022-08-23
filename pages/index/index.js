@@ -71,7 +71,7 @@ Page({
   handleCheckMyMission() {
     this.setData({ popupShow: false });
     wx.switchTab({
-      url: '/pages/mine/mine'
+      url: '/pages/missions/missions'
     });
   },
   handleToMarket() {

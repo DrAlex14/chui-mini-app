@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "大锤和美丽",
-  "usingComponents": {
-    "van-calendar": "@vant/weapp/calendar/index"
-  }
-}

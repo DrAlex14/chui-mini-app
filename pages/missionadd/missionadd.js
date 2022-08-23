@@ -11,6 +11,7 @@ Page({
     desc: '',
     maxCredit: getApp().globalData.maxCredit,
     credit: 0,
+    toOpenid: ''
   },
 
   /**
@@ -94,6 +95,11 @@ Page({
       })
       return
     }else{
+        const toOpenid = wx.getStorageSync('userInfo').openId === getApp().globalData._openidM ? getApp().globalData._openidW : getApp().globalData._openidM;
+        debugger
+        this.setData({
+          toOpenid: toOpenid
+        })
         await wx.cloud.callFunction({name: 'addMission', data: this.data}).then(
             () => {
                 wx.showToast({

@@ -1,5 +1,5 @@
 <!--pages/market/market.wxml-->
-<view class="market">
+<view class="market_page">
     <image style="width:100%" src="./image/MarketCover.jpg" mode="widthFix"/>
     <!-- <van-button size="normal" style="width:100%;text-align:center;margin: 10rpx 0" color="#74cffb">新增商品</van-button> -->
     <view style="width:100%;text-align:center;">敬请期待</view>

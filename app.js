@@ -17,5 +17,8 @@ App({
 
     //最多单次交易积分
     maxCredit: 500,
+
+    creditsListDB: 'credits',
+    missionListDB: 'MissionList'
   }
 })
