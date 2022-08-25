@@ -11,7 +11,19 @@ Page({
     slideButtons: [
       {extClass: 'removeBtn', text: '删除', type: 'warn'},
       {extClass: 'completeBtn', text: '完成', type: 'primary'}
-    ]
+    ],
+    missionDetailShow: false,
+    detail: {
+      _id: '',
+      _openid:	'',
+      toOpenId:	'',
+		  date: '',
+		  credit: 0,
+		  title:	'',
+		  desc:	'',
+      available: true,
+      star:	false
+    }
   },
 
   /**
@@ -118,7 +130,12 @@ Page({
         break;
     }
   },
-  toDetailPageUpper() {
+  toDetailPageUpper(item) {
     console.log('查看任务详情');
+    const itemData = item.currentTarget.dataset.item
+    this.setData({
+      missionDetailShow: true,
+      detail: JSON.parse(JSON.stringify(itemData))
+    })
   }
 })

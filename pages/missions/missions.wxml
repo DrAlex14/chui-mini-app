@@ -3,7 +3,7 @@
     <view class="form-group" style="z-index: 0; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
         <view class="form-cell" wx:for="{{unfinishedMissions}}" wx:key="index">
             <!-- <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' icon="{{true}}" bindbuttontap="slideButtonTapUpper"> -->
-                <view class="slide" data-index="{{index}}" bindtap="toDetailPageUpper">
+                <view class="slide" data-item="{{item}}" bindtap="toDetailPageUpper">
                     <view class="mission-info">
                         <view class="mission-info_title">{{item.title}}</view>
                         <view class="mission-info_award">💰 {{item.credit}} 积分</view>
@@ -45,9 +45,9 @@
 
     <view class="form-group_label">我给TA的任务<mp-badge content="{{releasedMissions.length}}" style="margin-left: 5px;" /></view>
     <view class="form-group" style="z-index: 0; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
-        <view class="form-cell" wx:for="{{releasedMissions}}" wx:key="index">
+        <view class="form-cell" wx:for="{{releasedMissions}}" wx:key="index" wx:for-item="item">
             <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' bindbuttontap="slideButtonTapUpper">
-                <view class="slide" data-index="{{index}}" bindtap="toDetailPageUpper">
+                <view class="slide" data-item="{{item}}" bindtap="toDetailPageUpper">
                     <view class="mission-info">
                         <view class="mission-info_title">{{item.title}}</view>
                         <view class="mission-info_award">💰 {{item.credit}} 积分</view>
@@ -71,4 +71,23 @@
             </button>
         </movable-view>
     </movable-area>
+    <van-dialog
+    use-slot
+    title="{{detail.title}}"
+    show="{{ missionDetailShow }}"
+    show-cancel-button
+    >
+        <view class="slide">
+            <view class="mission-info">
+                <view class="mission-info_award">📚{{detail.desc}} </view>
+                <view class="mission-info_award">💰 {{detail.credit}} 积分</view>
+                <view class="mission-info_date">📅 {{detail.date}} 创建</view>
+                <view>
+                    <view wx:if="{{mission_info_author === '大锤'}}">🔨 to 🐱</view>
+                    <view wx:else>🐱 to 🔨</view>
+                </view>
+            </view>
+            <image wx:if="{{item.star}}" class="star" src="Images/Star.png" />
+        </view>
+    </van-dialog>
 </view>
