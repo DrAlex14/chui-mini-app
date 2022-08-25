@@ -13,7 +13,7 @@
 .form-group {
   width: calc(100% - 40px);
   margin: 10px 20px;
-  border-radius: 10px;
+  border-radius: 10rpx;
   background: white;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .form-cell {
-  padding: 20px 15px;
+  padding: 10px 15px;
 }
 
 .form-cell:not(:last-child) {
