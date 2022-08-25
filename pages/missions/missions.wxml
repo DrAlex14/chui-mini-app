@@ -79,7 +79,7 @@
     >
         <view class="slide">
             <view class="mission-info">
-                <view class="mission-info_award">📚{{detail.desc}} </view>
+                <view class="mission-info_desc">📚{{detail.desc}} </view>
                 <view class="mission-info_award">💰 {{detail.credit}} 积分</view>
                 <view class="mission-info_date">📅 {{detail.date}} 创建</view>
                 <view>

@@ -10,7 +10,7 @@ Page({
     mission_info_author: wx.getStorageSync('userInfo').openId === getApp().globalData._openidM ? getApp().globalData.userM : getApp().globalData.userW,
     slideButtons: [
       {extClass: 'removeBtn', text: '删除', type: 'warn'},
-      {extClass: 'completeBtn', text: '完成', type: 'primary'}
+      {extClass: 'completeBtn', text: '完成'}
     ],
     missionDetailShow: false,
     detail: {

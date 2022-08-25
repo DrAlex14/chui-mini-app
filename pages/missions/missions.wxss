@@ -36,6 +36,6 @@
     top: 10%;
 }
 
-.removeBtn{
-  background-color: #ffaaff;
+.completeBtn .weui-slideview__btn{
+  background-color: #00ab9b;
 }
