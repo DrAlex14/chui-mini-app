@@ -75,7 +75,6 @@
     use-slot
     title="{{detail.title}}"
     show="{{ missionDetailShow }}"
-    show-cancel-button
     >
         <view class="slide">
             <view class="mission-info">
